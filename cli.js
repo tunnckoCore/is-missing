@@ -56,8 +56,8 @@ isMissing(name, function _cb(err, bool) {
   var yes = chalk.gray('Oh yes, ' + chalk.bold(name) + ' will be yours.');
   var doh = chalk.gray('Sorry, ' + chalk.bold(name) + ' already exists.');
 
-  var state = bool ? doh : yes;
-  var icon = bool ? log.error : log.success;
+  var state = bool === true ? yes : doh;
+  var icon = bool === true ? log.success : log.error;
 
   console.log('  %s %s', icon, state);
   console.log();

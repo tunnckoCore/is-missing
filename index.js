@@ -32,7 +32,7 @@ module.exports = function isMissing(name, callback) {
     : fmt('%s%s', npm, name);
 
   got.get(url, function _callback(err) {
-    if (is.kindof.null(err)) {
+    if (err && err.code === 404) {
       callback(null, true);
       return;
     }

@@ -32,34 +32,34 @@ test('is-missing:', function() {
     done();
   });
 
-  test('should return true if given `name` exist in npm registry', function(done) {
+  test('should return false if given `name` exist in npm registry', function(done) {
     isMissing('assert-kindof', function _cb(err, res) {
       assert.strictEqual(err, null);
-      assert.strictEqual(res, true);
+      assert.strictEqual(res, false);
       done();
     });
   });
 
-  test('should return false if given `name` exist in npm registry', function(done) {
+  test('should return true if given `name` not exist in npm registry', function(done) {
     isMissing('wombat-foo-bar-baz-qux-zero-four', function _cb(err, res) {
       assert.strictEqual(err, null);
-      assert.strictEqual(res, false);
-      done();
-    });
-  });
-
-  test('should return true when `user/repo` given (checks github)', function(done) {
-    isMissing('tunnckoCore/assert-kindof', function _cb(err, res) {
-      assert.strictEqual(err, null);
       assert.strictEqual(res, true);
       done();
     });
   });
 
-  test('should return false when `user/repo` given (checks github)', function(done) {
-    isMissing('tunnckoCore/foo-bar-baz-qux', function _cb(err, res) {
+  test('should return false when repository already exists', function(done) {
+    isMissing('tunnckoCore/assert-kindof', function _cb(err, res) {
       assert.strictEqual(err, null);
       assert.strictEqual(res, false);
+      done();
+    });
+  });
+
+  test('should return true when repository not exists', function(done) {
+    isMissing('tunnckoCore/foo-bar-baz-qux', function _cb(err, res) {
+      assert.strictEqual(err, null);
+      assert.strictEqual(res, true);
       done();
     });
   });
