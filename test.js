@@ -13,22 +13,22 @@ var isMissing = require('./index');
 
 test('is-missing:', function() {
   test('should throw TypeError when `name` is not a string', function(done) {
-    assert.throws(function _fixture() {
+    function fixture() {
       isMissing([1, 2, 3]);
-    }, TypeError);
-    assert.throws(function _fixture() {
-      isMissing([1, 2, 3]);
-    }, /to be string, but array given/);
+    }
+
+    assert.throws(fixture, TypeError);
+    assert.throws(fixture, /to be string, but array given/);
     done();
   });
 
   test('should throw TypeError when `callback` is not a function', function(done) {
-    assert.throws(function _fixture() {
+    function fixture() {
       isMissing('foobar', 'callback');
-    }, TypeError);
-    assert.throws(function _fixture() {
-      isMissing('foobar', 'callback');
-    }, /to be function, but string given/);
+    }
+
+    assert.throws(fixture, TypeError);
+    assert.throws(fixture, /to be function, but string given/);
     done();
   });
 
@@ -57,7 +57,7 @@ test('is-missing:', function() {
   });
 
   test('should return true when repository not exists', function(done) {
-    isMissing('tunnckoCore/foo-bar-baz-qux', function _cb(err, res) {
+    isMissing('mochajs/kjerhkjghkjhhhhhhhhhhhh5kjdsvfsdf', function _cb(err, res) {
       assert.strictEqual(err, null);
       assert.strictEqual(res, true);
       done();
