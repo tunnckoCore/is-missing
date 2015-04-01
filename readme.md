@@ -6,6 +6,7 @@
 ```
 npm i --save is-missing
 npm test
+is-missing --help
 ```
 
 
@@ -29,6 +30,21 @@ isMissing('mochajs/not-existing-repository', function _cb(err, bool) {
   console.log(bool);
   //=> false
 });
+```
+
+
+## CLI
+> run `is-missing --help` or try this one
+
+```
+npm i -g is-missing
+
+is-missing not-existing-npm-package-name
+
+  Aloha, master! How r u today?
+
+  ✔ Oh yes, not-existing-npm-package-name will be yours.
+
 ```
 
 

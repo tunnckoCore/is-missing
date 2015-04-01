@@ -23,12 +23,19 @@
     "url": "https://github.com/tunnckoCore/is-missing/blob/master/license.md"
   },
   "dependencies": {
-    "assert-kindof": "^1.0.0",
-    "github-short-url-regex": "^3.0.0",
-    "got": "^2.5.0"
+    "assert-kindof": "~1.0.0",
+    "chalk": "~1.0.0",
+    "github-short-url-regex": "~3.0.0",
+    "got": "~2.5.0",
+    "log-symbols": "~1.0.2",
+    "meow": "~3.1.0",
+    "multiline": "~1.0.2"
   },
   "devDependencies": {
     "istanbul-harmony": "~0.3.1",
     "mocha": "~2.2.1"
+  },
+  "bin": {
+    "is-missing": "cli.js"
   }
 }

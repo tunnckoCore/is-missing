@@ -20,7 +20,6 @@ module.exports = function isMissing(name, callback) {
   is.function(callback);
 
   var user = '';
-  var url = '';
 
   if (re().test(name)) {
     var match = re().exec(name);
@@ -28,11 +27,9 @@ module.exports = function isMissing(name, callback) {
     name = match[2];
   }
 
-  if (user.length) {
-    url = fmt('%s%s/%s', github, user, name);
-  }
-
-  url = fmt('%s%s', npm, name);
+  var url = user.length
+    ? fmt('%s%s/%s', github, user, name)
+    : fmt('%s%s', npm, name);
 
   got.get(url, function _callback(err) {
     if (is.kindof.null(err)) {
