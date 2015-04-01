@@ -7,12 +7,12 @@
 
 'use strict';
 
-
+var test = require('testit');
 var assert = require('assert');
 var isMissing = require('./index');
 
-describe('is-missing:', function() {
-  it('should throw TypeError when `name` is not a string', function(done) {
+test('is-missing:', function() {
+  test('should throw TypeError when `name` is not a string', function(done) {
     assert.throws(function _fixture() {
       isMissing([1, 2, 3]);
     }, TypeError);
@@ -22,7 +22,7 @@ describe('is-missing:', function() {
     done();
   });
 
-  it('should throw TypeError when `callback` is not a function', function(done) {
+  test('should throw TypeError when `callback` is not a function', function(done) {
     assert.throws(function _fixture() {
       isMissing('foobar', 'callback');
     }, TypeError);
@@ -32,7 +32,7 @@ describe('is-missing:', function() {
     done();
   });
 
-  it('should return true if given `name` exist in npm registry', function(done) {
+  test('should return true if given `name` exist in npm registry', function(done) {
     isMissing('assert-kindof', function _cb(err, res) {
       assert.strictEqual(err, null);
       assert.strictEqual(res, true);
@@ -40,7 +40,7 @@ describe('is-missing:', function() {
     });
   });
 
-  it('should return false if given `name` exist in npm registry', function(done) {
+  test('should return false if given `name` exist in npm registry', function(done) {
     isMissing('wombat-foo-bar-baz-qux-zero-four', function _cb(err, res) {
       assert.strictEqual(err, null);
       assert.strictEqual(res, false);
@@ -48,7 +48,7 @@ describe('is-missing:', function() {
     });
   });
 
-  it('should return true when `user/repo` given (checks github)', function(done) {
+  test('should return true when `user/repo` given (checks github)', function(done) {
     isMissing('tunnckoCore/assert-kindof', function _cb(err, res) {
       assert.strictEqual(err, null);
       assert.strictEqual(res, true);
@@ -56,7 +56,7 @@ describe('is-missing:', function() {
     });
   });
 
-  it('should return false when `user/repo` given (checks github)', function(done) {
+  test('should return false when `user/repo` given (checks github)', function(done) {
     isMissing('tunnckoCore/foo-bar-baz-qux', function _cb(err, res) {
       assert.strictEqual(err, null);
       assert.strictEqual(res, false);
