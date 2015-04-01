@@ -14,10 +14,22 @@ npm test
 
 ```js
 var isMissing = require('is-missing');
+
+isMissing('some-no-existing-npm-package-name', function _cb(err, bool) {
+  console.log(bool);
+  //=> false
+});
+
+isMissing('mochajs/mocha', function _cb(err, bool) {
+  console.log(bool);
+  //=> true
+});
+
+isMissing('mochajs/not-existing-repository', function _cb(err, bool) {
+  console.log(bool);
+  //=> false
+});
 ```
-
-
-## API / CLI
 
 
 ## Author
