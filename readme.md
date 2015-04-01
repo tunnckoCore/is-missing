@@ -1,6 +1,6 @@
 ## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
 
-> Check that given `name` exists in npm registry or github as user`s repository.
+> Check that given `name` or `user/repo` exists in npm registry or in github as organization/user repository.
 
 ## Install
 ```
