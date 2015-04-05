@@ -1,6 +1,6 @@
 {
   "name": "is-missing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check that given `name` or `user/repo` exists in npm registry or in github as organization/user repository.",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
@@ -26,7 +26,7 @@
     "assert-kindof": "~1.0.0",
     "chalk": "~1.0.0",
     "github-short-url-regex": "~3.0.0",
-    "got": "~2.5.0",
+    "got": "~2.6.0",
     "log-symbols": "~1.0.2",
     "meow": "~3.1.0",
     "multiline": "~1.0.2"

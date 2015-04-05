@@ -1,5 +1,10 @@
 
 
+## v1.0.1 / April 5, 2015
+- Release v1.0.1 / npm@v1.0.1
+- add related section
+- move to `assertit`
+
 ## v1.0.0 / April 1, 2015
 - Release v1.0.0 / npm@v1.0.0
 - update descriptions
