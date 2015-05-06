@@ -15,7 +15,25 @@
     "type": "git",
     "url": "git://github.com/tunnckoCore/is-missing.git"
   },
-  "keywords": [],
+  "keywords": [
+    "check",
+    "exist",
+    "git",
+    "github",
+    "is",
+    "is-missing",
+    "missing",
+    "name",
+    "npm",
+    "org",
+    "organization",
+    "package",
+    "pkg",
+    "registry",
+    "repo",
+    "repository",
+    "user"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/tunnckoCore/is-missing/blob/master/LICENSE.md"
