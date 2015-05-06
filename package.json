@@ -39,7 +39,6 @@
     "url": "https://github.com/tunnckoCore/is-missing/blob/master/LICENSE.md"
   },
   "dependencies": {
-    "assert-kindof": "~1.0.0",
     "chalk": "~1.0.0",
     "gh-got": "^1.0.3",
     "github-short-url-regex": "~3.0.0",

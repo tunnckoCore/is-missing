@@ -8,7 +8,6 @@
 
 'use strict'
 
-var is = require('assert-kindof')
 var meow = require('meow')
 var chalk = require('chalk')
 var isMissing = require('./index')
@@ -34,7 +33,7 @@ var cli = meow({
   */}))
 })
 
-if (is.kindof.array(cli.input) && !cli.input.length) {
+if (Array.isArray(cli.input) && !cli.input.length) {
   console.error()
   console.error(chalk.red('  Whoaaa!'))
   console.error()

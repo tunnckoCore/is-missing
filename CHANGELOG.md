@@ -11,7 +11,7 @@
 - update tests, DRY code
 - cleanup cli
 - improve checks, update tests
-- move to `testit` instead of mocha
+- move to `assertit` instead of mocha
 - add cli
 - add usage
 - run traviscov(1)

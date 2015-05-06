@@ -9,7 +9,7 @@
 
 var got = require('gh-got')
 var fmt = require('util').format
-var is = require('assert-kindof')
+var is = require('assertit').is
 var re = require('github-short-url-regex')
 
 var npmjs = 'https://www.npmjs.com/package/'
