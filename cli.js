@@ -21,6 +21,7 @@ var cli = meow({
     Options
       --help        show this help
       --version     current version
+      --token       github personal access token
 
     Usage
       is-missing [name]
@@ -49,7 +50,7 @@ console.log()
 
 var name = String(cli.input[0])
 
-isMissing(name, function _cb (err, bool) {
+isMissing(name, cli.flags, function _cb (err, bool) {
   if (!is.null(err)) {
     console.error()
     console.error(chalk.red('  Whoaaa!'))
