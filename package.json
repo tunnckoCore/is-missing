@@ -18,7 +18,7 @@
   "keywords": [],
   "license": {
     "type": "MIT",
-    "url": "https://github.com/tunnckoCore/is-missing/blob/master/license.md"
+    "url": "https://github.com/tunnckoCore/is-missing/blob/master/LICENSE.md"
   },
   "dependencies": {
     "assert-kindof": "~1.0.0",
