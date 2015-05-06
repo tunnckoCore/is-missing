@@ -7,31 +7,38 @@
 
 'use strict'
 
-var got = require('got')
+var got = require('gh-got')
 var fmt = require('util').format
 var is = require('assert-kindof')
 var re = require('github-short-url-regex')
 
-var github = 'https://api.github.com/repos/'
-var npm = 'https://www.npmjs.com/package/'
+var npmjs = 'https://www.npmjs.com/package/'
 
-module.exports = function isMissing (name, callback) {
+module.exports = function isMissing (name, opts, callback) {
   is.string(name)
+  if (!callback && typeof opts === 'function') {
+    callback = opts
+    opts = {}
+  }
+  opts = opts || {}
   is.function(callback)
 
   var user = ''
+  var regex = re()
 
-  if (re().test(name)) {
-    var match = re().exec(name)
+  if (regex.test(name)) {
+    var match = regex.exec(name)
     user = match[1]
     name = match[2]
   }
 
   var url = user.length
-    ? fmt('%s%s/%s', github, user, name)
-    : fmt('%s%s', npm, name)
+    ? fmt('repos/%s/%s', user, name)
+    : name
 
-  got.get(url, function _callback (err) {
+  opts.endpoint = user.length ? false : npmjs
+
+  got.get(url, opts, function _callback (err) {
     if (err && err.code === 404) {
       callback(null, true)
       return

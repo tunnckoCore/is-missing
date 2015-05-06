@@ -23,7 +23,7 @@ test('is-missing:', function () {
 
   test('should throw TypeError when `callback` is not a function', function (done) {
     function fixture () {
-      isMissing('foobar', 'callback')
+      isMissing('foobar', {}, 'callback')
     }
 
     test.throws(fixture, TypeError)
