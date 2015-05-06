@@ -48,6 +48,13 @@ console.log();
 var name = String(cli.input[0]);
 
 isMissing(name, function _cb(err, bool) {
+  if (!is.null(err)) {
+    console.error();
+    console.error(chalk.red('  Whoaaa!'));
+    console.error();
+    console.error('\n  %s %s\n', log.error, chalk.red(err.message));
+    exit(1);
+  }
   var yes = chalk.gray('Oh yes, ' + chalk.bold(name) + ' will be yours.');
   var doh = chalk.gray('Sorry, ' + chalk.bold(name) + ' already exists.');
 
