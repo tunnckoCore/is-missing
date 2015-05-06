@@ -20,7 +20,7 @@ module.exports = function isMissing (name, opts, callback) {
     callback = opts
     opts = {}
   }
-  opts = opts || {}
+  opts = is.kindof.object(opts) ? opts : {}
   is.function(callback)
 
   var user = ''
