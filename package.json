@@ -1,7 +1,7 @@
 {
   "name": "is-missing",
   "version": "1.0.2",
-  "description": "Check that given `name` or `user/repo` exists in npm registry or in github as organization/user repository.",
+  "description": "Check that given `name` or `user/repo` exists in npm registry or in github as user repository.",
   "scripts": {
     "test": "standard && node test.js",
     "travis": "standard && istanbul cover test.js --report lcovonly"
