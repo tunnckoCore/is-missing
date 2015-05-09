@@ -1,5 +1,9 @@
 
 
+## v1.0.3 / May 9, 2015
+- Release v1.0.3 / npm@v1.0.3
+- run update
+
 ## v1.0.2 / May 6, 2015
 - Release v1.0.2 / npm@v1.0.2
 - remove `assert-kindof` we have it in `assertit`
