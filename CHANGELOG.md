@@ -1,10 +1,10 @@
 
 
-## v1.0.3 / May 9, 2015
+## 1.0.3 - 2015-05-09
 - Release v1.0.3 / npm@v1.0.3
 - run update
 
-## v1.0.2 / May 6, 2015
+## 1.0.2 - 2015-05-06
 - Release v1.0.2 / npm@v1.0.2
 - remove `assert-kindof` we have it in `assertit`
 - add keywords
@@ -16,12 +16,12 @@
 - apply feross/standard
 - handle errors in cli
 
-## v1.0.1 / April 5, 2015
+## 1.0.1 - 2015-04-05
 - Release v1.0.1 / npm@v1.0.1
 - add related section
 - move to `assertit`
 
-## v1.0.0 / April 1, 2015
+## 1.0.0 - 2015-04-01
 - Release v1.0.0 / npm@v1.0.0
 - update descriptions
 - update tests, DRY code
@@ -32,5 +32,5 @@
 - add usage
 - run traviscov(1)
 
-## v0.0.0 / April 1, 2015
+## 0.0.0 - 2015-04-01
 - first commits / npm@v0.0.0

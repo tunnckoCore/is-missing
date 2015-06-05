@@ -2,18 +2,27 @@
   "name": "is-missing",
   "version": "1.0.3",
   "description": "Check that given `name` or `user/repo` exists in npm registry or in github as user repository.",
+  "repository": "tunnckoCore/is-missing",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "bin": "cli.js",
+  "license": "MIT",
   "scripts": {
     "test": "standard && node test.js",
     "travis": "standard && istanbul cover test.js --report lcovonly"
   },
-  "author": {
-    "name": "Charlike Mike Reagent",
-    "email": "mameto_100@mail.bg",
-    "url": "https://github.com/tunnckoCore"
+  "dependencies": {
+    "assertit": "^0.1.0",
+    "chalk": "~1.0.0",
+    "gh-got": "^1.0.3",
+    "github-short-url-regex": "~3.0.0",
+    "log-symbols": "~1.0.2",
+    "meow": "~3.1.0",
+    "multiline": "~1.0.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/tunnckoCore/is-missing.git"
+  "devDependencies": {
+    "istanbul": "^0.3.9",
+    "standard": "^3.7.3"
   },
   "keywords": [
     "check",
@@ -33,25 +42,5 @@
     "repo",
     "repository",
     "user"
-  ],
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/tunnckoCore/is-missing/blob/master/LICENSE.md"
-  },
-  "dependencies": {
-    "assertit": "^0.1.0",
-    "chalk": "~1.0.0",
-    "gh-got": "^1.0.3",
-    "github-short-url-regex": "~3.0.0",
-    "log-symbols": "~1.0.2",
-    "meow": "~3.1.0",
-    "multiline": "~1.0.2"
-  },
-  "devDependencies": {
-    "istanbul": "^0.3.9",
-    "standard": "^3.7.3"
-  },
-  "bin": {
-    "is-missing": "cli.js"
-  }
+  ]
 }
