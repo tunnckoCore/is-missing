@@ -39,6 +39,7 @@
     "url": "https://github.com/tunnckoCore/is-missing/blob/master/LICENSE.md"
   },
   "dependencies": {
+    "assertit": "^0.1.0",
     "chalk": "~1.0.0",
     "gh-got": "^1.0.3",
     "github-short-url-regex": "~3.0.0",
@@ -47,7 +48,6 @@
     "multiline": "~1.0.2"
   },
   "devDependencies": {
-    "assertit": "^0.1.0",
     "istanbul": "^0.3.9",
     "standard": "^3.7.3"
   },
