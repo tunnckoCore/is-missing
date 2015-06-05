@@ -1,5 +1,10 @@
 
 
+## 1.0.4 - 2015-06-05
+- Release v1.0.4 / npm@v1.0.4
+- update changelog, package.json
+- move `assertit` to dependencies (wtf, how passed on travis?!)
+
 ## 1.0.3 - 2015-05-09
 - Release v1.0.3 / npm@v1.0.3
 - run update

@@ -1,6 +1,6 @@
 {
   "name": "is-missing",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Check that given `name` or `user/repo` exists in npm registry or in github as user repository.",
   "repository": "tunnckoCore/is-missing",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
